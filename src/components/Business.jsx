@@ -1,10 +1,12 @@
 import React from 'react'
-import { features } from '../constants'
 import styles, { layout } from '../style'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations'
+import { send, shield, star } from '../assets'
 import Button from './Button'
 
 const FeatureCard = ({ icon, title, content, index }) => (
-  <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length - 1 ? 'mb-6' : 'mb-0'} feature-card`}>
+  <div className={`flex flex-row p-6 rounded-[20px] ${index !== 2 ? 'mb-6' : 'mb-0'} feature-card`}>
     <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>
       <img
         src={icon}
@@ -24,17 +26,38 @@ const FeatureCard = ({ icon, title, content, index }) => (
 )
 
 const Business = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
+
+  const features = [
+    {
+      id: "feature-1",
+      icon: star,
+      title: t.business.features.feature1.title,
+      content: t.business.features.feature1.content,
+    },
+    {
+      id: "feature-2",
+      icon: shield,
+      title: t.business.features.feature2.title,
+      content: t.business.features.feature2.content,
+    },
+    {
+      id: "feature-3",
+      icon: send,
+      title: t.business.features.feature3.title,
+      content: t.business.features.feature3.content,
+    },
+  ]
+
   return (
     <section id='features' className={layout.section}>
       <div className={layout.sectionInfo}>
-        <h2 className={styles.heading2}>Bạn phát triển kinh doanh,<br className='sm:block hidden'/> 
-        <span className='text-gradient'>MINDHEX lo phần công nghệ!</span>
+        <h2 className={styles.heading2}>{t.business.title}<br className='sm:block hidden'/> 
+        <span className='text-gradient'>{t.business.subtitle}</span>
         </h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Một hệ thống web hoặc app được thiết kế đúng cách sẽ giúp bạn đặt lịch dễ dàng, 
-        quản lý nội bộ hiệu quả, bán hàng nhanh hơn và nâng cao trải nghiệm khách hàng. 
-        MINDHEX chuyên xây dựng các giải pháp phần mềm theo yêu cầu: từ website đặt lịch cho nhà hàng
-         - khách sạn, app học trực tuyến, hệ thống quản trị nội bộ, đến nền tảng bán hàng đa kênh.
+        {t.business.description}
         </p>
         <Button styles='mt-10'/>
       </div>

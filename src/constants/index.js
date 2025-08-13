@@ -109,23 +109,23 @@ export const footerLinks = [
     links: [
       {
         name: "Content",
-        link: "https://www.hoobank.com/content/",
+        link: "https://www.mindhex.com/content/",
       },
       {
         name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
+        link: "https://www.mindhex.com/how-it-works/",
       },
       {
         name: "Create",
-        link: "https://www.hoobank.com/create/",
+        link: "https://www.mindhex.com/create/",
       },
       {
         name: "Explore",
-        link: "https://www.hoobank.com/explore/",
+        link: "https://www.mindhex.com/explore/",
       },
       {
         name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
+        link: "https://www.mindhex.com/terms-and-services/",
       },
     ],
   },
@@ -134,23 +134,23 @@ export const footerLinks = [
     links: [
       {
         name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
+        link: "https://www.mindhex.com/help-center/",
       },
       {
         name: "Partners",
-        link: "https://www.hoobank.com/partners/",
+        link: "https://www.mindhex.com/partners/",
       },
       {
         name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
+        link: "https://www.mindhex.com/suggestions/",
       },
       {
         name: "Blog",
-        link: "https://www.hoobank.com/blog/",
+        link: "https://www.mindhex.com/blog/",
       },
       {
         name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
+        link: "https://www.mindhex.com/newsletters/",
       },
     ],
   },
@@ -159,11 +159,11 @@ export const footerLinks = [
     links: [
       {
         name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        link: "https://www.mindhex.com/our-partner/",
       },
       {
         name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        link: "https://www.mindhex.com/become-a-partner/",
       },
     ],
   },

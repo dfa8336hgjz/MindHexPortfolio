@@ -12,11 +12,13 @@ import {
   Stats, 
   Testimonials 
 } from './components'
+import { LanguageProvider } from './contexts/LanguageContext'
 import styles from './style'
 
 const App = () => {
   return (
-    <div className='bg-primary w-full overflow-hidden'>
+    <LanguageProvider>
+      <div className='bg-primary w-full overflow-hidden'>
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar/>
@@ -41,6 +43,7 @@ const App = () => {
         </div>
       </div>
     </div>
+    </LanguageProvider>
   )
 }
 

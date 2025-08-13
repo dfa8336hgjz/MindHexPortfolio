@@ -1,8 +1,13 @@
 import React from 'react'
 import { apple, bill, google } from '../assets'
 import styles, { layout } from '../style'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations'
 
 const DesktopApp = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
+
   return (
     <section id='product' className={layout.sectionReverse}>
       <div className={layout.sectionImgReverse}>
@@ -15,11 +20,10 @@ const DesktopApp = () => {
         <div className='absolute z-[0] -left-1/2 bottom-0 w-[50%] h-[50%] rounded-full pink__gradient'/>
       </div>
       <div className={layout.sectionInfo}>
-        <h2 className={styles.heading2}>Dịch vụ xây dựng 
-          <br/> <span className='text-gradient'>Desktop App</span></h2>
+        <h2 className={styles.heading2}>{t.desktopApp.title} 
+          <br/> <span className='text-gradient'>{t.desktopApp.subtitle}</span></h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Giải pháp desktop app mạnh mẽ, bảo mật cao, hoạt động ổn định trên Windows/Mac.
-Phù hợp cho các hệ thống nội bộ, phần mềm quản lý dữ liệu, kế toán, vận hành doanh nghiệp... với khả năng tùy chỉnh sâu và tích hợp dễ dàng.
+        {t.desktopApp.description}
         </p>
       </div>  
     </section>

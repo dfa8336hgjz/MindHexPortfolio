@@ -1,8 +1,30 @@
 import React from 'react'
-import { stats } from '../constants'
 import styles from '../style'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations'
 
 const Stats = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
+
+  const stats = [
+    {
+      id: "stats-1",
+      title: t.stats.userActive,
+      value: "3800+",
+    },
+    {
+      id: "stats-2", 
+      title: t.stats.trustedCompany,
+      value: "230+",
+    },
+    {
+      id: "stats-3",
+      title: t.stats.transaction,
+      value: "$230M+",
+    },
+  ]
+
   return (
     <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}>
       {stats.map((stat) => (

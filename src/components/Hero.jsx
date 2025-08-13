@@ -1,8 +1,13 @@
 import styles from '../style'
 import { discount, robot } from '../assets'
+import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../translations'
 import GetStarted from './GetStarted'
 
 const Hero = () => {
+  const { language } = useLanguage()
+  const t = translations[language]
+
   return (
     <section id='home' className={`flex md:flex-row flex-col ${styles.paddingY}`}>
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
@@ -13,24 +18,24 @@ const Hero = () => {
             className='w-[32px] h-[32px]'
           />
           <p className={`${styles.paragraph} ml-2`}>
-            <span className='text-white'>20%</span> Discount For {" "}
-            <span className='text-white'>1 Month</span> Account
+            <span className='text-white'>{t.hero.discount}</span> {" "}
+            <span className='text-white'>{t.hero.month}</span> {t.hero.account}
           </p>
         </div>
         <div className='flex flex-row items-center w-full'>
           <h1 className='font-poppins font-semibold ss:text-[40px] text-[32px] text-white ss:leading-[64px] leading-[75px]'>
-            Giải pháp chuyển đổi số
+            {t.hero.title}
             <br/>
-            <span className='text-gradient'>Tối ưu, tối giản, tối đa</span> 
+            <span className='text-gradient'>{t.hero.subtitle}</span> 
             <br/>
-            Hiệu quả cho doanh nghiệp.
+            {t.hero.subtitle2}
           </h1>
           <div className='flex justify-center mt-8'>
             <GetStarted/>
           </div>
         </div>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Đội ngũ của chúng tôi áp dụng phương pháp tiếp cận hệ thống để xây dựng các giải pháp phần mềm tối ưu, phù hợp với nhu cầu riêng biệt của từng doanh nghiệp.
+        {t.hero.description}
         </p>
       </div>
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
