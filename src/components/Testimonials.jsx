@@ -1,5 +1,5 @@
 import React from 'react'
-import { feedback } from '../constants'
+import { people01, people02, people03 } from '../assets'
 import styles from '../style'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../translations'
@@ -8,6 +8,13 @@ import Feedback from './Feedback'
 const Testimonials = () => {
   const { language } = useLanguage()
   const t = translations[language]
+
+  // Map feedback data with images
+  const feedbackData = t.testimonials.feedback.map((item, index) => ({
+    ...item,
+    id: `feedback-${index + 1}`,
+    img: [people01, people02, people03][index]
+  }))
 
   return (
     <section id='clients' className={`${styles.paddingY} ${styles.flexce} flex-col relative`}>
@@ -21,7 +28,7 @@ const Testimonials = () => {
         </div>
       </div>
       <div className='flex flex-wrap sm:justify-start justify-center w-full feedback-contrainer relative z-[1]'>
-        {feedback.map((card) => (
+        {feedbackData.map((card) => (
           <Feedback key={card.id} {...card}/>        
         ))}
       </div>      

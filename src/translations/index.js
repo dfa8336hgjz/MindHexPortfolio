@@ -72,7 +72,24 @@ export const translations = {
     // Testimonials
     testimonials: {
       title: "Các dự án thành công",
-      description: "Mọi thứ bạn cần để chấp nhận thanh toán thẻ và phát triển doanh nghiệp ở bất cứ đâu trên hành tinh."
+      description: "Mọi thứ bạn cần để chấp nhận thanh toán thẻ và phát triển doanh nghiệp ở bất cứ đâu trên hành tinh.",
+      feedback: [
+        {
+          content: "Hệ thống quản lý nhà hàng của MINDHEX đã giúp chúng tôi tăng hiệu quả phục vụ lên 40% và giảm thời gian chờ đợi của khách hàng đáng kể.",
+          name: "Phung Minh Chien", 
+          title: "Founder & Leader"
+        },
+        {
+          content: "App đặt lịch học trực tuyến mà MINDHEX phát triển đã giúp trung tâm của chúng tôi tăng 200% số lượng học viên chỉ trong 6 tháng.",
+          name: "Nguyen Phuc Thanh",
+          title: "Founder & Leader"
+        },
+        {
+          content: "Phần mềm quản lý kho và bán hàng giúp doanh nghiệp chúng tôi theo dõi được tồn kho real-time và tăng doanh thu 150%.",
+          name: "Tuan Kiet",
+          title: "Founder & Leader"
+        }
+      ]
     },
 
     // CTA Section
@@ -166,7 +183,24 @@ export const translations = {
     // Testimonials
     testimonials: {
       title: "Successful Projects",
-      description: "Everything you need to accept card payments and grow your business anywhere on the planet."
+      description: "Everything you need to accept card payments and grow your business anywhere on the planet.",
+      feedback: [
+        {
+          content: "MINDHEX's restaurant management system helped us increase service efficiency by 40% and significantly reduce customer wait times.",
+          name: "Phung Minh Chien",
+          title: "Founder & Leader"
+        },
+        {
+          content: "The online learning booking app that MINDHEX developed helped our center increase the number of students by 200% in just 6 months.",
+          name: "Nguyen Phuc Thanh", 
+          title: "Founder & Leader"
+        },
+        {
+          content: "The inventory and sales management software helps our business track real-time inventory and increase revenue by 150%.",
+          name: "Tuan Kiet",
+          title: "Founder & Leader"
+        }
+      ]
     },
 
     // CTA Section
